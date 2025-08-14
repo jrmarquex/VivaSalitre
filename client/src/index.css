@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;500;600&family=Crimson+Text:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(45, 29%, 97%);
+  --foreground: hsl(20, 14%, 4%);
+  --card: hsl(45, 29%, 97%);
+  --card-foreground: hsl(20, 14%, 4%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14%, 4%);
+  --primary: hsl(28, 70%, 42%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(28, 84%, 55%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(45, 29%, 95%);
+  --muted-foreground: hsl(25, 25%, 35%);
+  --accent: hsl(39, 64%, 66%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(45, 25%, 90%);
+  --input: hsl(45, 25%, 95%);
+  --ring: hsl(28, 70%, 42%);
+  --chart-1: hsl(28, 70%, 42%);
+  --chart-2: hsl(39, 64%, 66%);
+  --chart-3: hsl(28, 84%, 55%);
+  --chart-4: hsl(25, 25%, 35%);
+  --chart-5: hsl(20, 14%, 4%);
+  
+  /* Salitre-specific colors */
+  --sertao-brown: hsl(28, 70%, 42%);
+  --terra-cotta: hsl(28, 84%, 55%);
+  --golden-sand: hsl(39, 64%, 66%);
+  --warm-beige: hsl(45, 29%, 97%);
+  --sertao-dark: hsl(20, 14%, 4%);
+  --sertao-medium: hsl(25, 25%, 35%);
+  
+  --font-sans: 'Source Sans Pro', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-accent: 'Crimson Text', serif;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: hsl(20, 14%, 4%);
+  --foreground: hsl(45, 29%, 97%);
+  --card: hsl(25, 25%, 8%);
+  --card-foreground: hsl(45, 29%, 95%);
+  --popover: hsl(20, 14%, 4%);
+  --popover-foreground: hsl(45, 29%, 97%);
+  --primary: hsl(28, 70%, 42%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(28, 84%, 55%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(25, 25%, 12%);
+  --muted-foreground: hsl(45, 25%, 65%);
+  --accent: hsl(39, 64%, 66%);
+  --accent-foreground: hsl(20, 14%, 4%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(25, 25%, 15%);
+  --input: hsl(25, 25%, 12%);
+  --ring: hsl(28, 70%, 42%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .hero-overlay {
+    background: linear-gradient(135deg, rgba(45, 24, 16, 0.8) 0%, rgba(139, 69, 19, 0.6) 100%);
+  }
+  
+  .section-divider {
+    background: linear-gradient(90deg, transparent 0%, hsl(var(--accent)) 50%, transparent 100%);
+    height: 2px;
+  }
+  
+  .cultural-card {
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+  }
+  
+  .cultural-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px hsl(var(--sertao-brown) / 0.15);
+  }
+  
+  .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: hsl(var(--accent));
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .prose {
+    @apply max-w-none;
+  }
+  
+  .prose h1, .prose h2, .prose h3 {
+    @apply font-serif text-sertao-brown;
+  }
+  
+  .prose p {
+    @apply text-sertao-medium leading-relaxed;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--accent));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
