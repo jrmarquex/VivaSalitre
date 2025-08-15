@@ -1,0 +1,619 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salitre - Capital da Mandioca | Patrimônio Cultural do Sertão</title>
+    <meta name="description" content="Descubra a rica história e tradições de Salitre, Capital da Mandioca no Ceará. Explore nossas comunidades quilombolas, cultura, folclore e rotas turísticas.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'sertao-brown': '#8B4513',
+                    'terra-cotta': '#D2691E', 
+                    'golden-sand': '#CD853F',
+                    'warm-beige': '#F5F5DC',
+                    'sertao-dark': '#2D1810',
+                    'sertao-medium': '#5D4037'
+                },
+                fontFamily: {
+                    'serif': ['Playfair Display', 'serif'],
+                    'sans': ['Source Sans Pro', 'sans-serif'],
+                    'accent': ['Crimson Text', 'serif']
+                }
+            }
+        }
+    };
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;500;600&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(45, 24, 16, 0.8) 0%, rgba(139, 69, 19, 0.6) 100%);
+        }
+        
+        .section-divider {
+            background: linear-gradient(90deg, transparent 0%, #CD853F 50%, transparent 100%);
+            height: 2px;
+        }
+        
+        .admin-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+        
+        .cultural-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(145deg, #FAFAF9 0%, #F5F5DC 100%);
+        }
+        
+        .cultural-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.15);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #CD853F;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-warm-beige text-sertao-dark font-sans">
+    
+    <!-- Admin Access Button -->
+    <a href="/admin" class="admin-btn bg-sertao-brown hover:bg-terra-cotta text-white p-3 rounded-full shadow-lg transition-colors">
+        <i class="fas fa-cog text-lg"></i>
+    </a>
+    
+    <!-- Header Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-serif font-bold text-sertao-brown">
+                        Salitre
+                        <span class="block text-sm font-sans font-normal text-sertao-medium">Capital da Mandioca</span>
+                    </h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#inicio" class="nav-link text-sertao-dark hover:text-sertao-brown px-3 py-2 text-sm font-medium">Início</a>
+                        <a href="#historia" class="nav-link text-sertao-dark hover:text-sertao-brown px-3 py-2 text-sm font-medium">História & Tradições</a>
+                        <a href="#quilombolas" class="nav-link text-sertao-dark hover:text-sertao-brown px-3 py-2 text-sm font-medium">Comunidades Quilombolas</a>
+                        <a href="#cultura" class="nav-link text-sertao-dark hover:text-sertao-brown px-3 py-2 text-sm font-medium">Cultura & Folclore</a>
+                        <a href="#rotas" class="nav-link text-sertao-dark hover:text-sertao-brown px-3 py-2 text-sm font-medium">Rotas Turísticas</a>
+                        <a href="#gastronomia" class="nav-link text-sertao-dark hover:text-sertao-brown px-3 py-2 text-sm font-medium">Gastronomia</a>
+                        <a href="#religiosidade" class="nav-link text-sertao-dark hover:text-sertao-brown px-3 py-2 text-sm font-medium">Religiosidade</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="mobile-menu-btn text-sertao-dark hover:text-sertao-brown focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-menu md:hidden hidden bg-white border-t border-warm-beige">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#inicio" class="block px-3 py-2 text-base font-medium text-sertao-dark hover:text-sertao-brown">Início</a>
+                <a href="#historia" class="block px-3 py-2 text-base font-medium text-sertao-dark hover:text-sertao-brown">História & Tradições</a>
+                <a href="#quilombolas" class="block px-3 py-2 text-base font-medium text-sertao-dark hover:text-sertao-brown">Comunidades Quilombolas</a>
+                <a href="#cultura" class="block px-3 py-2 text-base font-medium text-sertao-dark hover:text-sertao-brown">Cultura & Folclore</a>
+                <a href="#rotas" class="block px-3 py-2 text-base font-medium text-sertao-dark hover:text-sertao-brown">Rotas Turísticas</a>
+                <a href="#gastronomia" class="block px-3 py-2 text-base font-medium text-sertao-dark hover:text-sertao-brown">Gastronomia</a>
+                <a href="#religiosidade" class="block px-3 py-2 text-base font-medium text-sertao-dark hover:text-sertao-brown">Religiosidade</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center">
+        <!-- Panoramic landscape of Brazilian sertão with vast dry plains and sparse vegetation -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080');"></div>
+        <div class="hero-overlay absolute inset-0"></div>
+        
+        <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">
+                Salitre
+                <span class="block text-3xl md:text-4xl text-golden-sand font-accent mt-2">Capital da Mandioca</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 leading-relaxed font-light">
+                No coração do sertão cearense, onde história, cultura e tradição se entrelaçam em cada grão de areia
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#historia" class="bg-golden-sand hover:bg-terra-cotta text-white px-8 py-4 rounded-lg text-lg font-medium transition-colors">
+                    Explore Nossa História
+                </a>
+                <a href="#quilombolas" class="border-2 border-white text-white hover:bg-white hover:text-sertao-dark px-8 py-4 rounded-lg text-lg font-medium transition-colors">
+                    Conheça as Comunidades
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- História & Tradições Section -->
+    <section id="historia" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-sertao-brown mb-6">História & Tradições</h2>
+                <div class="section-divider w-24 mx-auto mb-8"></div>
+                <p class="text-xl text-sertao-medium max-w-3xl mx-auto leading-relaxed">
+                    Séculos de história preservados nas tradições que ecoam pelo sertão
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <!-- Traditional mandioca plantation with workers in rural Brazilian setting -->
+                    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Cultivo tradicional de mandioca no sertão" class="rounded-2xl shadow-2xl w-full" />
+                </div>
+                <div class="space-y-6">
+                    <p class="text-lg leading-relaxed text-sertao-dark">
+                        <span class="font-accent text-xl text-sertao-brown font-semibold">"</span>
+                        No extremo sul do Ceará, no coração do sertão, está Salitre, município que orgulhosamente carrega o título de Capital da Mandioca. Mais do que um produto, a mandioca aqui é história, identidade e sustento.
+                        <span class="font-accent text-xl text-sertao-brown font-semibold">"</span>
+                    </p>
+                    <p class="text-lg leading-relaxed text-sertao-medium">
+                        Presente desde o cultivo nas pequenas roças até o trabalho artesanal nas tradicionais fábricas de farinha, onde o aroma e o sabor contam séculos de tradição que passam de geração em geração.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="text-center p-6 bg-warm-beige rounded-lg">
+                            <i class="fas fa-seedling text-3xl text-sertao-brown mb-3"></i>
+                            <h4 class="font-serif font-semibold text-sertao-brown mb-2">Cultivo Ancestral</h4>
+                            <p class="text-sm text-sertao-medium">Técnicas tradicionais preservadas</p>
+                        </div>
+                        <div class="text-center p-6 bg-warm-beige rounded-lg">
+                            <i class="fas fa-industry text-3xl text-sertao-brown mb-3"></i>
+                            <h4 class="font-serif font-semibold text-sertao-brown mb-2">Fábricas Artesanais</h4>
+                            <p class="text-sm text-sertao-medium">Produção de farinha tradicional</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comunidades Quilombolas Section -->
+    <section id="quilombolas" class="py-20 bg-warm-beige">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-sertao-brown mb-6">Comunidades Quilombolas</h2>
+                <div class="section-divider w-24 mx-auto mb-8"></div>
+                <p class="text-xl text-sertao-medium max-w-3xl mx-auto leading-relaxed">
+                    Nove comunidades que preservam a ancestralidade africana no sertão
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Community card 1 -->
+                <div class="cultural-card rounded-2xl p-8 text-center">
+                    <!-- Traditional African-Brazilian cultural celebration with people in colorful clothing -->
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Celebração cultural quilombola" class="w-full h-48 object-cover rounded-xl mb-6" />
+                    <i class="fas fa-users text-4xl text-sertao-brown mb-4"></i>
+                    <h3 class="text-xl font-serif font-semibold text-sertao-brown mb-3">Saberes Ancestrais</h3>
+                    <p class="text-sertao-medium leading-relaxed">
+                        Conhecimentos tradicionais transmitidos através de gerações, preservando a rica herança cultural africana.
+                    </p>
+                </div>
+                
+                <!-- Community card 2 -->
+                <div class="cultural-card rounded-2xl p-8 text-center">
+                    <!-- Traditional Brazilian folk dance performance with colorful costumes -->
+                    <img src="https://pixabay.com/get/g6a34a1c8dd462feaa906341afe2e23ab07aca789766d67c53845132f4eeb45463fbd86f5972c62db8f65de5ed700bcd1972e62afec8514580aaa6da1bad7bc67_1280.jpg" alt="Danças tradicionais quilombolas" class="w-full h-48 object-cover rounded-xl mb-6" />
+                    <i class="fas fa-music text-4xl text-sertao-brown mb-4"></i>
+                    <h3 class="text-xl font-serif font-semibold text-sertao-brown mb-3">Ritmos & Danças</h3>
+                    <p class="text-sertao-medium leading-relaxed">
+                        Expressões artísticas que mantêm viva a memória e a identidade cultural das comunidades quilombolas.
+                    </p>
+                </div>
+                
+                <!-- Community card 3 -->
+                <div class="cultural-card rounded-2xl p-8 text-center">
+                    <!-- Traditional handicrafts and artisan work with natural materials -->
+                    <img src="https://pixabay.com/get/gaaa5905bffa53d432f9dd195403ea71872eace5b2d99938b9d35436175c867c5a84cd1d8e7cbd6144d88a5817a4faedc3a81e3672a89dc2c88ef9c732087be0e_1280.jpg" alt="Artesanato quilombola tradicional" class="w-full h-48 object-cover rounded-xl mb-6" />
+                    <i class="fas fa-palette text-4xl text-sertao-brown mb-4"></i>
+                    <h3 class="text-xl font-serif font-semibold text-sertao-brown mb-3">Artesanato</h3>
+                    <p class="text-sertao-medium leading-relaxed">
+                        Criações únicas que contam histórias através do trabalho manual com materiais da região.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-white rounded-2xl p-8 md:p-12">
+                <blockquote class="text-center">
+                    <p class="text-2xl font-accent text-sertao-brown italic leading-relaxed mb-6">
+                        "O município é um mosaico cultural e humano. Suas 9 comunidades quilombolas preservam saberes, ritmos, danças, artesanato e histórias que ecoam a ancestralidade africana no sertão."
+                    </p>
+                    <footer class="text-sertao-medium font-medium">— Patrimônio Cultural de Salitre</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultura & Folclore Section -->
+    <section id="cultura" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-sertao-brown mb-6">Cultura & Folclore</h2>
+                <div class="section-divider w-24 mx-auto mb-8"></div>
+                <p class="text-xl text-sertao-medium max-w-3xl mx-auto leading-relaxed">
+                    Tradições que pulsam nas ruas e praças, mantendo viva a alma salitrense
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+                <!-- Folguedo 1: Caretas -->
+                <div class="cultural-card rounded-2xl p-6 text-center">
+                    <!-- Traditional Brazilian carnival masks and colorful folklore costumes -->
+                    <img src="https://pixabay.com/get/gb185cff91c10e4b3037c4cd73277661e13e37cb0832308bc2677ef85772a11a5df24b057c1b6536eb470029d949a0f4e30d7ac7be97a0aa3fa7239a05e3f1ba4_1280.jpg" alt="Caretas - folguedo tradicional" class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h3 class="text-lg font-serif font-semibold text-sertao-brown mb-2">Caretas</h3>
+                    <p class="text-sm text-sertao-medium">Manifestação folclórica tradicional</p>
+                </div>
+                
+                <!-- Folguedo 2: Reisado -->
+                <div class="cultural-card rounded-2xl p-6 text-center">
+                    <!-- Traditional Brazilian religious procession with ornate decorations -->
+                    <img src="https://pixabay.com/get/g6948390b2e56ce27d85db78eee23a3c7ed8b93a5a9c2db65008bb38b38225445cd49e82201708610a4022e05029761b910c272c52a3b8448d437e1fe70b28d43_1280.jpg" alt="Reisado - tradição religiosa" class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h3 class="text-lg font-serif font-semibold text-sertao-brown mb-2">Reisado</h3>
+                    <p class="text-sm text-sertao-medium">Colorido e devoto folguedo religioso</p>
+                </div>
+                
+                <!-- Folguedo 3: Maneiro-Pau -->
+                <div class="cultural-card rounded-2xl p-6 text-center">
+                    <!-- Traditional Brazilian stick fighting dance performance -->
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200" alt="Danças maneiro-pau" class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h3 class="text-lg font-serif font-semibold text-sertao-brown mb-2">Maneiro-Pau</h3>
+                    <p class="text-sm text-sertao-medium">Danças animadas tradicionais</p>
+                </div>
+                
+                <!-- Tradição 4: Pega de Boi -->
+                <div class="cultural-card rounded-2xl p-6 text-center">
+                    <!-- Cowboys and cattle in Brazilian sertão landscape -->
+                    <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200" alt="Pega de boi no sertão" class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h3 class="text-lg font-serif font-semibold text-sertao-brown mb-2">Pega de Boi</h3>
+                    <p class="text-sm text-sertao-medium">Tradição que emociona e resiste</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rotas Turísticas Section -->
+    <section id="rotas" class="py-20 bg-warm-beige">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-sertao-brown mb-6">Rotas Turísticas</h2>
+                <div class="section-divider w-24 mx-auto mb-8"></div>
+                <p class="text-xl text-sertao-medium max-w-3xl mx-auto leading-relaxed">
+                    Caminhos que conectam você com a história natural e cultural do sertão
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Rota dos Vaqueiros -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <!-- Historic cowboy trail through Brazilian countryside with mountains -->
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300" alt="Rota dos Vaqueiros histórica" class="w-full h-64 object-cover rounded-xl mb-6" />
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-horse text-2xl text-sertao-brown mr-3"></i>
+                        <h3 class="text-2xl font-serif font-semibold text-sertao-brown">Rota dos Vaqueiros</h3>
+                    </div>
+                    <p class="text-sertao-medium leading-relaxed mb-6">
+                        Reviva os trajetos históricos do sertão, percorrendo os mesmos caminhos dos antigos vaqueiros que desbravaram essas terras com coragem e determinação.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-sertao-brown text-white px-3 py-1 rounded-full text-sm">História</span>
+                        <span class="bg-terra-cotta text-white px-3 py-1 rounded-full text-sm">Tradição</span>
+                        <span class="bg-golden-sand text-white px-3 py-1 rounded-full text-sm">Aventura</span>
+                    </div>
+                </div>
+                
+                <!-- Rota da Geodiversidade -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <!-- Ancient rock formations and fossil sites in Brazilian landscape -->
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300" alt="Formações geológicas e fósseis" class="w-full h-64 object-cover rounded-xl mb-6" />
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-mountain text-2xl text-sertao-brown mr-3"></i>
+                        <h3 class="text-2xl font-serif font-semibold text-sertao-brown">Rota da Geodiversidade</h3>
+                    </div>
+                    <p class="text-sertao-medium leading-relaxed mb-6">
+                        Descubra paisagens imponentes, fósseis milenares e formações rochosas que contam milhões de anos da história natural do planeta Terra.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-sertao-brown text-white px-3 py-1 rounded-full text-sm">Geologia</span>
+                        <span class="bg-terra-cotta text-white px-3 py-1 rounded-full text-sm">Natureza</span>
+                        <span class="bg-golden-sand text-white px-3 py-1 rounded-full text-sm">Ciência</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gastronomia Section -->
+    <section id="gastronomia" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-sertao-brown mb-6">Gastronomia Tradicional</h2>
+                <div class="section-divider w-24 mx-auto mb-8"></div>
+                <p class="text-xl text-sertao-medium max-w-3xl mx-auto leading-relaxed">
+                    Sabores autênticos que contam a história do sertão em cada prato
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Traditional foods featuring cassava/mandioca -->
+                <div class="text-center">
+                    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Farinha de mandioca tradicional" class="w-full h-64 object-cover rounded-xl mb-4" />
+                    <h3 class="text-xl font-serif font-semibold text-sertao-brown mb-2">Farinha da Terra</h3>
+                    <p class="text-sertao-medium">Produzida artesanalmente nas casas de farinha tradicionais</p>
+                </div>
+                
+                <!-- Traditional Brazilian sertão cuisine -->
+                <div class="text-center">
+                    <img src="https://pixabay.com/get/g16c92ed60b3accc22cbc5f59518c55abc0e49b6e4d7559b21a48a370679bc171d4f8e4b9acf45da570c6091324a8ff74127d9271da9e839df1ea840411118813_1280.jpg" alt="Culinária tradicional do sertão" class="w-full h-64 object-cover rounded-xl mb-4" />
+                    <h3 class="text-xl font-serif font-semibold text-sertao-brown mb-2">Pratos Típicos</h3>
+                    <p class="text-sertao-medium">Receitas passadas de geração em geração</p>
+                </div>
+                
+                <!-- Traditional Brazilian sweets and desserts -->
+                <div class="text-center">
+                    <img src="https://pixabay.com/get/gce915f4295868c9f3a6710fef01eded8493a5d357ffbe97540c95ecd9458c1d2e80477d411dda057bbd1d55ece4e7d34e897231df76e37fc89158b58101a8ccd_1280.jpg" alt="Doces tradicionais regionais" class="w-full h-64 object-cover rounded-xl mb-4" />
+                    <h3 class="text-xl font-serif font-semibold text-sertao-brown mb-2">Doces Regionais</h3>
+                    <p class="text-sertao-medium">Sabores únicos da tradição salitrense</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Religiosidade Section -->
+    <section id="religiosidade" class="py-20 bg-warm-beige">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-sertao-brown mb-6">Religiosidade</h2>
+                <div class="section-divider w-24 mx-auto mb-8"></div>
+                <p class="text-xl text-sertao-medium max-w-3xl mx-auto leading-relaxed">
+                    Diversidade de fé que entrelaça tradições e fortalece a comunidade
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Catholic faith -->
+                <div class="bg-white rounded-2xl p-8 text-center">
+                    <!-- Traditional Catholic religious procession in Brazil -->
+                    <img src="https://pixabay.com/get/g1cf24aa49935c60ea114c19f051183fd6ed41009478408a0bf86bfdafc6812570602ac272c618b441c1ff37c4895f0d8575cb4c66a2bb0c4420c40c684b0c2ef_1280.jpg" alt="Procissões e festas católicas" class="w-full h-40 object-cover rounded-lg mb-6" />
+                    <i class="fas fa-cross text-3xl text-sertao-brown mb-4"></i>
+                    <h3 class="text-xl font-serif font-semibold text-sertao-brown mb-3">Fé Católica</h3>
+                    <p class="text-sertao-medium">Procissões e festas que unem a comunidade em devoção e tradição.</p>
+                </div>
+                
+                <!-- Evangelical expressions -->
+                <div class="bg-white rounded-2xl p-8 text-center">
+                    <!-- Community church gathering with people singing and celebrating -->
+                    <img src="https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" alt="Expressões evangélicas comunitárias" class="w-full h-40 object-cover rounded-lg mb-6" />
+                    <i class="fas fa-hands-praying text-3xl text-sertao-brown mb-4"></i>
+                    <h3 class="text-xl font-serif font-semibold text-sertao-brown mb-3">Expressões Evangélicas</h3>
+                    <p class="text-sertao-medium">Louvor e comunidade que fortalecem os laços fraternais.</p>
+                </div>
+                
+                <!-- African matrix traditions -->
+                <div class="bg-white rounded-2xl p-8 text-center">
+                    <!-- Traditional African-Brazilian spiritual ceremony with candles and offerings -->
+                    <img src="https://pixabay.com/get/gc2d05513cc5d2f3b29c7992c9a8b29d3bf1cdc3ce0fb9e541f0a09a1c65570268076a0c144b9b834fa931cda86be518c6a67ced27aade6d9106c540fd54bb008_1280.jpg" alt="Tradições de matriz africana" class="w-full h-40 object-cover rounded-lg mb-6" />
+                    <i class="fas fa-yin-yang text-3xl text-sertao-brown mb-4"></i>
+                    <h3 class="text-xl font-serif font-semibold text-sertao-brown mb-3">Tradições Africanas</h3>
+                    <p class="text-sertao-medium">Umbanda e espiritualidade que honram os ancestrais.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-8 md:p-12">
+                <blockquote class="text-center">
+                    <p class="text-2xl font-accent text-sertao-brown italic leading-relaxed mb-6">
+                        "Essa herança se entrelaça com uma diversidade religiosa marcante: a fé católica, as expressões evangélicas e as tradições de matriz africana, mantendo viva a espiritualidade e o respeito aos ancestrais."
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hospitalidade Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <!-- Peaceful sunset scene under a large tree in Brazilian countryside -->
+                    <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=500" alt="Hospitalidade salitrense" class="rounded-2xl shadow-2xl w-full" />
+                </div>
+                <div>
+                    <h2 class="text-4xl font-serif font-bold text-sertao-brown mb-6">Hospitalidade Sertaneja</h2>
+                    <p class="text-xl text-sertao-medium leading-relaxed mb-8">
+                        <span class="font-accent text-2xl text-sertao-brown">"</span>
+                        E quando a noite cai, a hospitalidade do povo salitrense brilha: seja numa conversa à sombra de um pé de umbuzeiro, seja no acolhimento caloroso que só o sertão sabe oferecer.
+                        <span class="font-accent text-2xl text-sertao-brown">"</span>
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-heart text-xl text-terra-cotta mr-4"></i>
+                            <span class="text-sertao-dark">Acolhimento genuíno e caloroso</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-tree text-xl text-terra-cotta mr-4"></i>
+                            <span class="text-sertao-dark">Conversas à sombra dos umbuzeiros</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-moon text-xl text-terra-cotta mr-4"></i>
+                            <span class="text-sertao-dark">Noites estreladas no sertão</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer class="bg-sertao-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-2xl font-serif font-bold text-golden-sand mb-6">Contato</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-golden-sand mr-3"></i>
+                            <span>Salitre, Ceará - Brasil</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-golden-sand mr-3"></i>
+                            <span>contato@salitre.ce.gov.br</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-golden-sand mr-3"></i>
+                            <span>(88) 3000-0000</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-2xl font-serif font-bold text-golden-sand mb-6">Links Rápidos</h3>
+                    <div class="space-y-2">
+                        <a href="#historia" class="block hover:text-golden-sand transition-colors">História & Tradições</a>
+                        <a href="#quilombolas" class="block hover:text-golden-sand transition-colors">Comunidades Quilombolas</a>
+                        <a href="#cultura" class="block hover:text-golden-sand transition-colors">Cultura & Folclore</a>
+                        <a href="#rotas" class="block hover:text-golden-sand transition-colors">Rotas Turísticas</a>
+                        <a href="/admin" class="block hover:text-golden-sand transition-colors">Área Administrativa</a>
+                    </div>
+                </div>
+                
+                <!-- Admin Panel Info -->
+                <div>
+                    <h3 class="text-2xl font-serif font-bold text-golden-sand mb-6">Gestão de Conteúdo</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Acesse a área administrativa para adicionar novos conteúdos, inserir imagens e gerenciar as informações do site.
+                    </p>
+                    <a href="/admin" class="inline-block bg-golden-sand hover:bg-terra-cotta text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                        <i class="fas fa-cog mr-2"></i>Acessar Admin
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-sertao-medium pt-8 mt-12 text-center">
+                <p class="text-gray-400">
+                    © 2024 Prefeitura Municipal de Salitre. Todos os direitos reservados. | 
+                    <span class="text-golden-sand">Capital da Mandioca</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        (function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        })();
+        
+        // Smooth scrolling for navigation links
+        (function() {
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Close mobile menu if open
+                        const mobileMenu = document.querySelector('.mobile-menu');
+                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        })();
+        
+        // Admin panel access simulation
+        (function() {
+            const adminLinks = document.querySelectorAll('a[href="/admin"]');
+            
+            adminLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // TODO: Implement admin panel authentication and routing
+                    alert('Área administrativa: Implementar autenticação e painel de controle para gestão de conteúdo.\n\nFuncionalidades incluem:\n- Editor WYSIWYG para criação de artigos\n- Upload de imagens\n- Seleção de seção do menu\n- Gerenciamento de conteúdo');
+                });
+            });
+        })();
+        
+        // Add scroll reveal effect to cards
+        (function() {
+            const cards = document.querySelectorAll('.cultural-card');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+        })();
+    </script>
+</body>
+</html>
