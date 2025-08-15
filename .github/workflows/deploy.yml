@@ -1,5 +1,8 @@
 name: Deploy to GitHub Pages
 
+# Workflow para deploy automático no GitHub Pages
+# Configurado para aplicações React/SPA
+
 on:
   push:
     branches: [ main ]
