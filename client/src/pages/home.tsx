@@ -77,10 +77,6 @@ export default function Home() {
                 Salitre também é destino de quem busca se conectar com a história da terra. A Rota dos Vaqueiros revive trajetos históricos do sertão, enquanto a Rota da Geodiversidade revela paisagens imponentes, fósseis e formações rochosas que contam milhões de anos de história natural.
               </p>
               
-              <p className="text-lg mb-6">
-                E quando a noite cai, a hospitalidade do povo salitrense brilha: seja numa conversa à sombra de um pé de umbuzeiro, numa tapioca feita na hora ou na vibração das grandes festas.
-              </p>
-              
               <p className="text-xl font-semibold text-center text-orange-900 mt-12">
                 Salitre, Ceará. Capital da Mandioca.
               </p>
