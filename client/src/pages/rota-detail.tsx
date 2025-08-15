@@ -5,6 +5,53 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
+const getGalleryImages = (rotaId: string) => {
+  const imagesByRota = {
+    mandiocultura: [
+      { icon: "🌱", title: "Plantio da Mandioca" },
+      { icon: "👨‍🌾", title: "Agricultor na Roça" },
+      { icon: "🏭", title: "Fábrica de Farinha" },
+      { icon: "🥞", title: "Tapioca Tradicional" },
+      { icon: "🍞", title: "Beiju Artesanal" },
+      { icon: "🧺", title: "Colheita da Mandioca" }
+    ],
+    afroturistica: [
+      { icon: "🥁", title: "Tambores Quilombolas" },
+      { icon: "💃", title: "Danças Tradicionais" },
+      { icon: "🎭", title: "Caretas e Reisado" },
+      { icon: "🏘️", title: "Comunidade Quilombola" },
+      { icon: "🎨", title: "Artesanato Afro" },
+      { icon: "🍲", title: "Culinária Ancestral" }
+    ],
+    vaqueiro: [
+      { icon: "🐂", title: "Gado no Sertão" },
+      { icon: "🤠", title: "Vaqueiro Tradicional" },
+      { icon: "🐎", title: "Cavalo de Vaquejada" },
+      { icon: "🌵", title: "Caatinga Sertaneja" },
+      { icon: "🏇", title: "Pega de Boi" },
+      { icon: "🔥", title: "Fogueira dos Vaqueiros" }
+    ],
+    geodiversidade: [
+      { icon: "🗿", title: "Formações Rochosas" },
+      { icon: "🦕", title: "Fósseis Antigos" },
+      { icon: "⛰️", title: "Paredões de Pedra" },
+      { icon: "🏜️", title: "Paisagem do Sertão" },
+      { icon: "🔬", title: "Estudo Geológico" },
+      { icon: "📸", title: "Contemplação Natural" }
+    ],
+    fe: [
+      { icon: "⛪", title: "Igreja Centenária" },
+      { icon: "🙏", title: "Procissão Católica" },
+      { icon: "✝️", title: "Celebração Evangélica" },
+      { icon: "🕯️", title: "Ritual de Umbanda" },
+      { icon: "👥", title: "Comunhão Religiosa" },
+      { icon: "🎵", title: "Cânticos Sagrados" }
+    ]
+  };
+  
+  return imagesByRota[rotaId as keyof typeof imagesByRota] || [];
+};
+
 const rotasData = {
   mandiocultura: {
     titulo: "Rota da Mandiocultura",
@@ -127,6 +174,30 @@ export default function RotaDetail() {
                       <p key={index} className="text-gray-700 mb-6 leading-relaxed">
                         {paragrafo}
                       </p>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Gallery Section */}
+              <Card className="mb-8">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold text-orange-900 mb-6 text-center">
+                    Galeria de Imagens
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {getGalleryImages(rotaId).map((image, index) => (
+                      <div 
+                        key={index}
+                        className="aspect-video bg-gradient-to-br from-orange-100 to-amber-100 rounded-lg overflow-hidden shadow-md"
+                      >
+                        <div className="w-full h-full flex items-center justify-center p-4">
+                          <div className="text-center">
+                            <div className="text-2xl mb-2">{image.icon}</div>
+                            <p className="text-sm font-medium text-orange-900">{image.title}</p>
+                          </div>
+                        </div>
+                      </div>
                     ))}
                   </div>
                 </CardContent>
