@@ -2,6 +2,8 @@
 
 Um site moderno e responsivo que celebra a cultura, gastronomia e história de Salitre, destacando suas rotas turísticas, comunidades quilombolas e tradições religiosas.
 
+**Status:** ✅ Configurado para GitHub Pages com deploy automático
+
 ## 🚀 Funcionalidades
 
 - **Seções Principais:**
