@@ -27,37 +27,49 @@ const getGalleryImages = (rotaId: string): GalleryImage[] => {
       { 
         icon: "🥁", 
         title: "Tambores Quilombolas",
-        image: "/images/parceiro_afroturistico_1.webp",
+        image: "/images/galeria_afroturistica_1.webp",
         hasImage: true
       },
       { 
         icon: "💃", 
         title: "Danças Tradicionais",
-        image: "/images/parceiro_afroturistico_2.webp",
+        image: "/images/galeria_afroturistica_2.webp",
         hasImage: true
       },
       { 
         icon: "🎭", 
         title: "Caretas e Reisado",
-        image: "/images/parceiro_afroturistico_3.webp",
+        image: "/images/galeria_afroturistica_3.webp",
         hasImage: true
       },
       { 
         icon: "🏘️", 
         title: "Comunidade Quilombola",
-        image: "/images/parceiro_afroturistico_4.webp",
+        image: "/images/galeria_afroturistica_4.webp",
         hasImage: true
       },
       { 
         icon: "🎨", 
         title: "Artesanato Afro",
-        image: "/images/parceiro_afroturistico_5.webp",
+        image: "/images/galeria_afroturistica_5.webp",
         hasImage: true
       },
       { 
         icon: "🍲", 
         title: "Culinária Ancestral",
-        image: "/images/parceiro_afroturistico_6.webp",
+        image: "/images/galeria_afroturistica_6.webp",
+        hasImage: true
+      },
+      { 
+        icon: "🌿", 
+        title: "Tradições Ancestrais",
+        image: "/images/galeria_afroturistica_7.webp",
+        hasImage: true
+      },
+      { 
+        icon: "🌟", 
+        title: "Cultura Viva",
+        image: "/images/galeria_afroturistica_8.webp",
         hasImage: true
       }
     ],
