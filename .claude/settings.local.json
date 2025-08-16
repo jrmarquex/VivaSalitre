@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "WebFetch(domain:jrmarquex.github.io)",
+      "Bash(gh workflow:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(curl:*)"
+    ],
+    "defaultMode": "acceptEdits"
+  }
+}

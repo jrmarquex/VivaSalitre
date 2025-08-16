@@ -5,8 +5,16 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
-const getGalleryImages = (rotaId: string) => {
-  const imagesByRota = {
+// Interface para as imagens da galeria
+interface GalleryImage {
+  icon: string;
+  title: string;
+  image?: string;
+  hasImage?: boolean;
+}
+
+const getGalleryImages = (rotaId: string): GalleryImage[] => {
+  const imagesByRota: Record<string, GalleryImage[]> = {
     mandiocultura: [
       { icon: "🌱", title: "Plantio da Mandioca" },
       { icon: "👨‍🌾", title: "Agricultor na Roça" },
@@ -16,12 +24,42 @@ const getGalleryImages = (rotaId: string) => {
       { icon: "🧺", title: "Colheita da Mandioca" }
     ],
     afroturistica: [
-      { icon: "🥁", title: "Tambores Quilombolas" },
-      { icon: "💃", title: "Danças Tradicionais" },
-      { icon: "🎭", title: "Caretas e Reisado" },
-      { icon: "🏘️", title: "Comunidade Quilombola" },
-      { icon: "🎨", title: "Artesanato Afro" },
-      { icon: "🍲", title: "Culinária Ancestral" }
+      { 
+        icon: "🥁", 
+        title: "Tambores Quilombolas",
+        image: "/images/parceiro_afroturistico_1.webp",
+        hasImage: true
+      },
+      { 
+        icon: "💃", 
+        title: "Danças Tradicionais",
+        image: "/images/parceiro_afroturistico_2.webp",
+        hasImage: true
+      },
+      { 
+        icon: "🎭", 
+        title: "Caretas e Reisado",
+        image: "/images/parceiro_afroturistico_3.webp",
+        hasImage: true
+      },
+      { 
+        icon: "🏘️", 
+        title: "Comunidade Quilombola",
+        image: "/images/parceiro_afroturistico_4.webp",
+        hasImage: true
+      },
+      { 
+        icon: "🎨", 
+        title: "Artesanato Afro",
+        image: "/images/parceiro_afroturistico_5.webp",
+        hasImage: true
+      },
+      { 
+        icon: "🍲", 
+        title: "Culinária Ancestral",
+        image: "/images/parceiro_afroturistico_6.webp",
+        hasImage: true
+      }
     ],
     vaqueiro: [
       { icon: "🐂", title: "Gado no Sertão" },
@@ -49,7 +87,7 @@ const getGalleryImages = (rotaId: string) => {
     ]
   };
   
-  return imagesByRota[rotaId as keyof typeof imagesByRota] || [];
+  return imagesByRota[rotaId] || [];
 };
 
 const rotasData = {
@@ -189,14 +227,33 @@ export default function RotaDetail() {
                     {getGalleryImages(rotaId).map((image, index) => (
                       <div 
                         key={index}
-                        className="aspect-video bg-gradient-to-br from-orange-100 to-amber-100 rounded-lg overflow-hidden shadow-md"
+                        className="aspect-video bg-gradient-to-br from-orange-100 to-amber-100 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
                       >
-                        <div className="w-full h-full flex items-center justify-center p-4">
-                          <div className="text-center">
-                            <div className="text-2xl mb-2">{image.icon}</div>
-                            <p className="text-sm font-medium text-orange-900">{image.title}</p>
+                        {image.hasImage ? (
+                          // Mostrar imagem real quando disponível
+                          <div className="relative w-full h-full">
+                            <img 
+                              src={image.image} 
+                              alt={image.title}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                              <div className="text-center">
+                                <div className="text-2xl mb-2">{image.icon}</div>
+                                <p className="text-sm font-medium text-white">{image.title}</p>
+                              </div>
+                            </div>
                           </div>
-                        </div>
+                        ) : (
+                          // Mostrar placeholder quando não há imagem
+                          <div className="w-full h-full flex items-center justify-center p-4">
+                            <div className="text-center">
+                              <div className="text-2xl mb-2">{image.icon}</div>
+                              <p className="text-sm font-medium text-orange-900">{image.title}</p>
+                            </div>
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -209,15 +266,43 @@ export default function RotaDetail() {
                   <h3 className="text-2xl font-bold text-orange-900 mb-6 text-center">
                     Logos dos Parceiros
                   </h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    {[1, 2, 3, 4, 5, 6, 7, 8].map((partner) => (
-                      <div 
-                        key={partner}
-                        className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300"
-                      >
-                        <span className="text-gray-500 text-sm">Logo {partner}</span>
-                      </div>
-                    ))}
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {rotaId === 'afroturistica' ? (
+                      // Imagens reais para rota afroturística
+                      [
+                        { src: '/images/parceiro_afroturistico_1.webp', alt: 'Parceiro Afroturístico 1' },
+                        { src: '/images/parceiro_afroturistico_2.webp', alt: 'Parceiro Afroturístico 2' },
+                        { src: '/images/parceiro_afroturistico_3.webp', alt: 'Parceiro Afroturístico 3' },
+                        { src: '/images/parceiro_afroturistico_4.webp', alt: 'Parceiro Afroturístico 4' },
+                        { src: '/images/parceiro_afroturistico_5.webp', alt: 'Parceiro Afroturístico 5' },
+                        { src: '/images/parceiro_afroturistico_6.webp', alt: 'Parceiro Afroturístico 6' },
+                        { src: '/images/parceiro_afroturistico_7.webp', alt: 'Parceiro Afroturístico 7' },
+                        { src: '/images/parceiro_afroturistico_8.webp', alt: 'Parceiro Afroturístico 8' },
+                        { src: '/images/parceiro_afroturistico_9.webp', alt: 'Parceiro Afroturístico 9' }
+                      ].map((partner, index) => (
+                        <div 
+                          key={index}
+                          className="aspect-square bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300"
+                        >
+                          <img 
+                            src={partner.src} 
+                            alt={partner.alt}
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      ))
+                    ) : (
+                      // Placeholders para outras rotas
+                      [1, 2, 3, 4, 5, 6, 7, 8].map((partner) => (
+                        <div 
+                          key={partner}
+                          className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300"
+                        >
+                          <span className="text-gray-500 text-sm">Logo {partner}</span>
+                        </div>
+                      ))
+                    )}
                   </div>
                 </CardContent>
               </Card>
