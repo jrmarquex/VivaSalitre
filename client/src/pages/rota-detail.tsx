@@ -229,6 +229,26 @@ export default function RotaDetail() {
                 </CardContent>
               </Card>
 
+              {/* Depoimento da Dona Zefa - Apenas para rota da mandiocultura */}
+              {rotaId === 'mandiocultura' && (
+                <Card className="mb-8 bg-gradient-to-r from-orange-50 to-amber-50 border-orange-200">
+                  <CardContent className="p-8">
+                    <div className="text-center">
+                      <div className="text-4xl mb-4">🌿</div>
+                      <blockquote className="text-lg text-gray-700 italic leading-relaxed mb-4">
+                        "A gente quando fala diz: - Mãe Dioca (mandioca).. Ela é a mãe de todos nós. Aguenta tudo; a estiagem e os períodos de chuva."
+                      </blockquote>
+                      <div className="text-sm text-orange-700 font-medium">
+                        Dona Zefa, do Quilombo Serra dos Chagas
+                      </div>
+                      <div className="text-xs text-orange-600 mt-1">
+                        sobre a importância da mandioca para a comunidade
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
+
               {/* Gallery Section */}
               <Card className="mb-8">
                 <CardContent className="p-8">
